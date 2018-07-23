@@ -8,3 +8,8 @@ name := "scala-dev"
 version := "1.0"
 
 scalaVersion := "2.12.6"
+
+/* Use %% between groupId and artifactId to automatically select the correct artifact based on the configured
+ * Scala version.
+ */
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"

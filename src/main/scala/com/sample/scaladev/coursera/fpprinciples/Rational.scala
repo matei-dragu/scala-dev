@@ -1,14 +1,11 @@
 package com.sample.scaladev.coursera.fpprinciples
 
-class Rational(x: Int, y: Int) {
-  require(y != 0, "The denominator must be nonzero!") // <=== PRECONDITION
+class Rational(val numer: Int, val denom: Int) {
+  require(denom != 0, "The denominator must be nonzero!") // <=== PRECONDITION
 
   def this(x: Int) = { // <=== SECOND CONSTRUCTOR
     this(x, 1)
   }
-
-  val numer = x
-  val denom = y
 
   override def toString = s"Rational(numer=$numer, denom=$denom)"
 
